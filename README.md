@@ -2,39 +2,6 @@
 
 PayVerify is a full-stack, mobile-first Progressive Web Application (PWA) designed for Ethiopian restaurants and hotels. It solves screenshot payment fraud by initiating direct request-to-pay push notifications via **Chapa** and **SantimPay** APIs, with a mobile-optimized interface for waiters and a desktop financial dashboard for cashiers.
 
----
-
-## 🚀 Quick Start Guide
-
-### 1. Install Backend Dependencies
-```bash
-cd backend
-npm install
-```
-
-### 2. Install Frontend Dependencies
-```bash
-cd ../frontend
-npm install
-```
-
-### 3. Start Backend & Frontend
-In Terminal 1 (Backend):
-```bash
-cd backend
-npm start
-# Server runs on http://localhost:5000
-```
-
-In Terminal 2 (Frontend):
-```bash
-cd frontend
-npm run dev
-# App runs on http://localhost:5173
-```
-
----
-
 ## 👥 Default Demo Credentials
 
 | Role | Username | Password | Device Profile |
@@ -47,28 +14,6 @@ npm run dev
 > **Note**: PayVerify enforces a strict password policy: minimum 16 characters, requiring upper/lowercase letters, numbers, and symbols (or a 5+ word passphrase), and uniqueness across all accounts.
 
 ---
-
----
-
-## 🚀 Production Deployment Options
-
-### Option A: Monolithic Deployment (Single Node Server)
-The backend server is already configured to automatically serve the compiled frontend production build from `frontend/dist`.
-
-1. **Build Frontend**:
-   ```bash
-   cd frontend
-   npm run build
-   ```
-2. **Start Production Backend**:
-   ```bash
-   cd ../backend
-   npm start
-   ```
-   Both the API (`/api/*`) and the PWA frontend (`/*`) will run on port `5000` (`http://localhost:5000` or your domain).
-
----
-
 ## ✨ Features
 
 - **Direct Cashier Verification**: Solves screenshot fraud by sending bill requests directly to the cashier station for real-time validation.
