@@ -1,0 +1,563 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Abebe Bikila",
+      "username": "waiter1",
+      "password_hash": "$2a$10$7TiMl3UVSESNOP4HotI9ZOVL/bzEG.efOf2gFoxSCW.P.2u8qbYNC",
+      "role": "waiter",
+      "created_at": "2026-09-04T06:38:13.763Z"
+    },
+    {
+      "id": 2,
+      "name": "Tigist Assefa",
+      "username": "waiter2",
+      "password_hash": "$2a$10$3.OFDaKBwR/1ST6BBvaYB..d4WtIGlI8IcsNCEHZn15hOJPwshC0u",
+      "role": "waiter",
+      "created_at": "2026-09-04T06:38:13.766Z"
+    },
+    {
+      "id": 3,
+      "name": "Yosef Addisu",
+      "username": "cashier1",
+      "password_hash": "$2a$10$2LlJzTkVxDlf8w1vSQzqEue5cKMAcjRh62aWyeFphyySW.jhacyOm",
+      "role": "cashier",
+      "created_at": "2026-09-04T06:38:13.766Z"
+    },
+    {
+      "id": 4,
+      "name": "Hotel Owner (Admin)",
+      "username": "admin",
+      "password_hash": "$2a$10$YBf17eGevsvfWwYgurLx2./3xKWTU7MFFczeY9jVUbg.uuGUalfr.",
+      "role": "admin",
+      "created_at": "2026-09-04T06:38:13.766Z"
+    },
+    {
+      "id": 5,
+      "name": "Hawi Addisu",
+      "username": "waiter3",
+      "password_hash": "$2a$10$kBeG1cA0AmSTt8mSm7lm5eBY.DlQGAge1MoydjZqAsHlqcnT1CtAG",
+      "role": "waiter",
+      "created_at": "2026-09-12T11:48:27.765Z"
+    }
+  ],
+  "services": [
+    {
+      "id": 1,
+      "name": "Food",
+      "icon": "Utensils"
+    },
+    {
+      "id": 2,
+      "name": "Drinks",
+      "icon": "Wine"
+    },
+    {
+      "id": 3,
+      "name": "Other",
+      "icon": "Tag"
+    }
+  ],
+  "transactions": [
+    {
+      "id": 10,
+      "reference_id": "TXN-20260907-9681",
+      "waiter_id": 3,
+      "service_id": 2,
+      "table_number": "T-14",
+      "amount": 1200,
+      "vat_amount": 156.52,
+      "gateway": "Telebirr",
+      "payment_method": "Telebirr",
+      "customer_phone": "9821",
+      "bank_tx_id": "9821",
+      "status": "confirmed",
+      "gateway_reference_id": "[{\"id\":\"bill-1788776086777-0.014271622731352185\",\"name\":\"shiro\",\"price\":350,\"quantity\":2,\"category\":\"Food\"},{\"id\":\"bill-1788776119305\",\"name\":\"Bedele special\",\"price\":50,\"quantity\":10,\"category\":\"Drinks\"}]",
+      "items": [],
+      "decline_reason": null,
+      "created_at": "2026-09-07T10:16:02.070Z",
+      "confirmed_at": "2026-09-07T10:16:22.728Z",
+      "confirmed_by": 3
+    },
+    {
+      "id": 11,
+      "reference_id": "TXN-20260907-3151",
+      "waiter_id": 1,
+      "service_id": 3,
+      "table_number": "T-14",
+      "amount": 1700,
+      "vat_amount": 221.74,
+      "gateway": "CBE Birr / Mobile",
+      "payment_method": "Telebirr",
+      "customer_phone": "5033",
+      "bank_tx_id": "5033",
+      "status": "confirmed",
+      "gateway_reference_id": "[{\"id\":\"bill-1788776246194\",\"name\":\"meat\",\"price\":1700,\"quantity\":1,\"category\":\"Other\"}]",
+      "items": [],
+      "decline_reason": null,
+      "created_at": "2026-09-07T10:18:39.233Z",
+      "confirmed_at": "2026-09-07T10:19:22.925Z",
+      "confirmed_by": 3
+    },
+    {
+      "id": 12,
+      "reference_id": "TXN-20260907-7816",
+      "waiter_id": 1,
+      "service_id": 1,
+      "table_number": "T-1",
+      "amount": 1050,
+      "vat_amount": 136.96,
+      "gateway": "Dashen / Amole",
+      "payment_method": "Telebirr",
+      "customer_phone": "5033",
+      "bank_tx_id": "5033",
+      "status": "confirmed",
+      "gateway_reference_id": "[{\"id\":\"item-1788778742031-380\",\"name\":\"shiro\",\"price\":350,\"quantity\":3,\"category\":\"Food\"}]",
+      "items": [],
+      "decline_reason": null,
+      "created_at": "2026-09-07T10:59:19.464Z",
+      "confirmed_at": "2026-09-07T10:59:44.894Z",
+      "confirmed_by": 3
+    },
+    {
+      "id": 13,
+      "reference_id": "TXN-20260907-3091",
+      "waiter_id": 3,
+      "service_id": 1,
+      "table_number": "T-1",
+      "amount": 1750,
+      "vat_amount": 228.26,
+      "gateway": "CBE Birr / Mobile",
+      "payment_method": "Telebirr",
+      "customer_phone": "9053",
+      "bank_tx_id": "9053",
+      "status": "confirmed",
+      "gateway_reference_id": "[{\"id\":\"item-1788778884026-432\",\"name\":\"shiro\",\"price\":350,\"quantity\":5,\"category\":\"Food\"}]",
+      "items": [],
+      "decline_reason": null,
+      "created_at": "2026-09-07T11:01:44.349Z",
+      "confirmed_at": "2026-09-07T11:02:15.297Z",
+      "confirmed_by": 3
+    },
+    {
+      "id": 14,
+      "reference_id": "TXN-20260907-2457",
+      "waiter_id": 3,
+      "service_id": 1,
+      "table_number": "T-1",
+      "amount": 1750,
+      "vat_amount": 228.26,
+      "gateway": "Telebirr",
+      "payment_method": "Telebirr",
+      "customer_phone": "ytyt",
+      "bank_tx_id": "ytyt",
+      "status": "confirmed",
+      "gateway_reference_id": "[{\"id\":\"item-1788778884026-432\",\"name\":\"shiro\",\"price\":350,\"quantity\":5,\"category\":\"Food\"}]",
+      "items": [],
+      "decline_reason": null,
+      "created_at": "2026-09-07T11:20:46.594Z",
+      "confirmed_at": "2026-09-07T11:21:01.491Z",
+      "confirmed_by": 3
+    },
+    {
+      "id": 15,
+      "reference_id": "TXN-20260907-3244",
+      "waiter_id": 3,
+      "service_id": 1,
+      "table_number": "T-1",
+      "amount": 1750,
+      "vat_amount": 228.26,
+      "gateway": "Bank of Abyssinia",
+      "payment_method": "Telebirr",
+      "customer_phone": "9871",
+      "bank_tx_id": "9871",
+      "status": "confirmed",
+      "gateway_reference_id": "[{\"id\":\"item-1788778884026-432\",\"name\":\"shiro\",\"price\":350,\"quantity\":5,\"category\":\"Food\"}]",
+      "items": [],
+      "decline_reason": null,
+      "created_at": "2026-09-07T11:33:31.908Z",
+      "confirmed_at": "2026-09-07T11:33:55.265Z",
+      "confirmed_by": 3
+    },
+    {
+      "id": 16,
+      "reference_id": "TXN-20260907-9352",
+      "waiter_id": 1,
+      "service_id": 1,
+      "table_number": "T-14",
+      "amount": 350,
+      "vat_amount": 45.65,
+      "gateway": "Dashen / Amole",
+      "payment_method": "Telebirr",
+      "customer_phone": "6598",
+      "bank_tx_id": "6598",
+      "status": "confirmed",
+      "gateway_reference_id": "[{\"id\":\"item-1788782515441-991\",\"name\":\"shiro\",\"price\":350,\"quantity\":1,\"category\":\"Food\"}]",
+      "items": [],
+      "decline_reason": null,
+      "created_at": "2026-09-07T12:02:09.965Z",
+      "confirmed_at": "2026-09-07T12:02:24.762Z",
+      "confirmed_by": 3
+    },
+    {
+      "id": 17,
+      "reference_id": "TXN-20260907-6653",
+      "waiter_id": 1,
+      "service_id": 1,
+      "table_number": "T-15",
+      "amount": 850,
+      "vat_amount": 110.87,
+      "gateway": "cashier",
+      "payment_method": "CBE Birr / Mobile",
+      "customer_phone": "",
+      "bank_tx_id": "CBE-77291",
+      "status": "failed",
+      "gateway_reference_id": "CBE-77291",
+      "items": [
+        {
+          "id": "1",
+          "name": "Special Tibs",
+          "price": 850,
+          "quantity": 1
+        }
+      ],
+      "decline_reason": "Payment not received on phone yet",
+      "created_at": "2026-09-07T12:14:43.564Z",
+      "confirmed_at": null,
+      "confirmed_by": null
+    },
+    {
+      "id": 18,
+      "reference_id": "TXN-20260907-4236",
+      "waiter_id": 1,
+      "service_id": 1,
+      "table_number": "T-8",
+      "amount": 1250,
+      "vat_amount": 163.04,
+      "gateway": "cashier",
+      "payment_method": "Bank of Abyssinia",
+      "customer_phone": "",
+      "bank_tx_id": "BOA-4433",
+      "status": "confirmed",
+      "gateway_reference_id": "BOA-4433",
+      "items": [
+        {
+          "id": "1",
+          "name": "Special Kitfo",
+          "price": 1250,
+          "quantity": 1
+        }
+      ],
+      "decline_reason": null,
+      "created_at": "2026-09-07T12:16:17.228Z",
+      "confirmed_at": "2026-09-07T12:16:17.257Z",
+      "confirmed_by": 3
+    },
+    {
+      "id": 19,
+      "reference_id": "TXN-20260907-4997",
+      "waiter_id": 3,
+      "service_id": 1,
+      "table_number": "T-14",
+      "amount": 350,
+      "vat_amount": 45.65,
+      "gateway": "cashier",
+      "payment_method": "Dashen / Amole",
+      "customer_phone": "",
+      "bank_tx_id": "6598",
+      "status": "confirmed",
+      "gateway_reference_id": "6598",
+      "items": [
+        {
+          "id": "item-1788782515441-991",
+          "name": "shiro",
+          "price": 350,
+          "quantity": 1,
+          "category": "Food"
+        }
+      ],
+      "decline_reason": null,
+      "created_at": "2026-09-07T12:19:33.925Z",
+      "confirmed_at": "2026-09-07T12:19:41.725Z",
+      "confirmed_by": 3
+    },
+    {
+      "id": 11,
+      "reference_id": "TXN-20260907-9265",
+      "waiter_id": 3,
+      "service_id": 1,
+      "table_number": "T-14",
+      "amount": 700,
+      "vat_amount": 91.3,
+      "gateway": "cashier",
+      "payment_method": "Awash Birr / Bank",
+      "customer_phone": "",
+      "bank_tx_id": "6598",
+      "status": "confirmed",
+      "gateway_reference_id": "6598",
+      "items": [
+        {
+          "id": "item-1788782515441-991",
+          "name": "shiro",
+          "price": 350,
+          "quantity": 2,
+          "category": "Food"
+        }
+      ],
+      "decline_reason": null,
+      "created_at": "2026-09-07T12:48:45.998Z",
+      "confirmed_at": "2026-09-07T12:49:04.846Z",
+      "confirmed_by": 3
+    },
+    {
+      "id": 12,
+      "reference_id": "TXN-20260907-7880",
+      "waiter_id": 3,
+      "service_id": 1,
+      "table_number": "T-1",
+      "amount": 350,
+      "vat_amount": 45.65,
+      "gateway": "cashier",
+      "payment_method": "Coopay-Ebirr",
+      "customer_phone": "",
+      "bank_tx_id": "7698",
+      "status": "confirmed",
+      "gateway_reference_id": "7698",
+      "items": [
+        {
+          "id": "item-1788785615312-584",
+          "name": "shiro",
+          "price": 350,
+          "quantity": 1,
+          "category": "Food"
+        }
+      ],
+      "decline_reason": null,
+      "created_at": "2026-09-07T12:53:44.742Z",
+      "confirmed_at": "2026-09-07T12:53:54.880Z",
+      "confirmed_by": 3
+    },
+    {
+      "id": 13,
+      "reference_id": "TXN-20260908-6690",
+      "waiter_id": 3,
+      "service_id": 1,
+      "table_number": "T-14",
+      "amount": 350,
+      "vat_amount": 45.65,
+      "gateway": "cashier",
+      "payment_method": "Safaricom M-PESA",
+      "customer_phone": "",
+      "bank_tx_id": "8787",
+      "status": "confirmed",
+      "gateway_reference_id": "8787",
+      "items": [
+        {
+          "id": "item-1788845707085-477",
+          "name": "shiro",
+          "price": 350,
+          "quantity": 1,
+          "category": "Food"
+        }
+      ],
+      "decline_reason": null,
+      "created_at": "2026-09-08T05:35:32.298Z",
+      "confirmed_at": "2026-09-08T05:35:52.140Z",
+      "confirmed_by": 3
+    },
+    {
+      "id": 14,
+      "reference_id": "TXN-20260908-4778",
+      "waiter_id": 3,
+      "service_id": 2,
+      "table_number": "T-1",
+      "amount": 55,
+      "vat_amount": 7.17,
+      "gateway": "cashier",
+      "payment_method": "Dashen / Amole",
+      "customer_phone": "",
+      "bank_tx_id": "7676",
+      "status": "confirmed",
+      "gateway_reference_id": "7676",
+      "items": [
+        {
+          "id": "item-1788846286781-102",
+          "name": "Bedele",
+          "price": 55,
+          "quantity": 1,
+          "category": "Drinks"
+        }
+      ],
+      "decline_reason": null,
+      "created_at": "2026-09-08T05:44:57.540Z",
+      "confirmed_at": "2026-09-08T05:45:12.841Z",
+      "confirmed_by": 3
+    },
+    {
+      "id": 15,
+      "reference_id": "TXN-20260908-8029",
+      "waiter_id": 3,
+      "service_id": 2,
+      "table_number": "T-14",
+      "amount": 165,
+      "vat_amount": 21.52,
+      "gateway": "cashier",
+      "payment_method": "Cash",
+      "customer_phone": "",
+      "bank_tx_id": "",
+      "status": "confirmed",
+      "gateway_reference_id": "TXN-20260908-8029",
+      "items": [
+        {
+          "id": "item-1788850403021-969",
+          "name": "Bedele",
+          "price": 55,
+          "quantity": 3,
+          "category": "Drinks"
+        }
+      ],
+      "decline_reason": null,
+      "created_at": "2026-09-08T06:53:30.623Z",
+      "confirmed_at": "2026-09-08T06:53:46.277Z",
+      "confirmed_by": 3
+    },
+    {
+      "id": 16,
+      "reference_id": "TXN-20260908-5992",
+      "waiter_id": 1,
+      "service_id": 1,
+      "table_number": "T-14",
+      "amount": 350,
+      "vat_amount": 45.65,
+      "gateway": "cashier",
+      "payment_method": "Telebirr",
+      "customer_phone": "",
+      "bank_tx_id": "8812",
+      "status": "confirmed",
+      "gateway_reference_id": "8812",
+      "items": [
+        {
+          "id": "item-1788853108364-189",
+          "name": "shiro",
+          "price": 350,
+          "quantity": 1,
+          "category": "Food"
+        }
+      ],
+      "decline_reason": null,
+      "created_at": "2026-09-08T07:38:44.230Z",
+      "confirmed_at": "2026-09-08T07:39:02.792Z",
+      "confirmed_by": 3
+    },
+    {
+      "id": 17,
+      "reference_id": "TXN-20260908-4347",
+      "waiter_id": 1,
+      "service_id": 1,
+      "table_number": "T-14",
+      "amount": 350,
+      "vat_amount": 45.65,
+      "gateway": "cashier",
+      "payment_method": "CBE Birr / Mobile",
+      "customer_phone": "",
+      "bank_tx_id": "8833",
+      "status": "confirmed",
+      "gateway_reference_id": "8833",
+      "items": [
+        {
+          "id": "item-1788853108364-189",
+          "name": "shiro",
+          "price": 350,
+          "quantity": 1,
+          "category": "Food"
+        }
+      ],
+      "decline_reason": null,
+      "created_at": "2026-09-08T07:42:17.674Z",
+      "confirmed_at": "2026-09-08T07:42:34.213Z",
+      "confirmed_by": 3
+    },
+    {
+      "id": 18,
+      "reference_id": "TXN-20260908-4120",
+      "waiter_id": 3,
+      "service_id": 1,
+      "table_number": "T-14",
+      "amount": 700,
+      "vat_amount": 0,
+      "gateway": "cashier",
+      "payment_method": "Awash Birr / Bank",
+      "payment_type": "wire",
+      "customer_phone": "",
+      "bank_tx_id": "8989",
+      "status": "confirmed",
+      "gateway_reference_id": "8989",
+      "items": [
+        {
+          "id": "item-1788853108364-189",
+          "name": "shiro",
+          "price": 350,
+          "quantity": 2,
+          "category": "Food"
+        }
+      ],
+      "decline_reason": null,
+      "created_at": "2026-09-08T17:27:35.103Z",
+      "confirmed_at": "2026-09-08T17:27:59.812Z",
+      "confirmed_by": 3
+    },
+    {
+      "id": 19,
+      "reference_id": "TXN-20260912-4106",
+      "waiter_id": 5,
+      "service_id": 1,
+      "table_number": "T-14",
+      "amount": 350,
+      "vat_amount": 0,
+      "gateway": "cashier",
+      "payment_method": "Telebirr",
+      "payment_type": "wire",
+      "customer_phone": "",
+      "bank_tx_id": "8989",
+      "status": "confirmed",
+      "gateway_reference_id": "8989",
+      "items": [
+        {
+          "id": "item-1789213750803-6",
+          "name": "shiro",
+          "price": 350,
+          "quantity": 1,
+          "category": "Food"
+        }
+      ],
+      "decline_reason": null,
+      "created_at": "2026-09-12T11:49:19.213Z",
+      "confirmed_at": "2026-09-12T11:49:59.626Z",
+      "confirmed_by": 3
+    }
+  ],
+  "menu_items": [
+    {
+      "id": 1,
+      "name": "shiro",
+      "price": 350,
+      "category": "Food",
+      "created_at": "2026-09-04T06:43:44.068Z"
+    },
+    {
+      "id": 3,
+      "name": "meat",
+      "price": 1700,
+      "category": "Other",
+      "created_at": "2026-09-07T10:17:26.206Z"
+    },
+    {
+      "id": 4,
+      "name": "Bedele",
+      "price": 55,
+      "category": "Drinks",
+      "created_at": "2026-09-08T05:44:22.804Z"
+    }
+  ],
+  "active_tables": []
+}
