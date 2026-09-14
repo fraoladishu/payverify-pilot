@@ -7,17 +7,37 @@ const apiRoutes = require('./routes/api');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// CORS — restrict to explicitly listed origins (set ALLOWED_ORIGINS in .env)
-const allowedOrigins = (process.env.ALLOWED_ORIGINS || 'http://localhost:5173')
+// Serve built React PWA frontend static assets BEFORE CORS
+const path = require('path');
+const fs = require('fs');
+const frontendDist = path.join(__dirname, '../../frontend/dist');
+if (fs.existsSync(frontendDist)) {
+  app.use(express.static(frontendDist));
+}
+
+// CORS — restrict to explicitly listed origins for API
+const allowedOrigins = (process.env.ALLOWED_ORIGINS || 'http://localhost:5173,http://localhost:5000')
   .split(',')
   .map(o => o.trim())
   .filter(Boolean);
 
 app.use(cors({
   origin: (origin, callback) => {
-    // Allow requests with no origin (curl, Postman, same-host server-to-server)
-    if (!origin || allowedOrigins.includes(origin)) return callback(null, true);
-    callback(new Error(`CORS: origin '${origin}' not allowed`));
+    // Allow requests with no origin (curl, mobile apps, same-origin browser fetches)
+    if (!origin) return callback(null, true);
+    // Allow if in allowed list or same host
+    if (allowedOrigins.includes(origin) || allowedOrigins.includes('*')) {
+      return callback(null, true);
+    }
+    // In production, if frontend and backend share the domain, allow railway/domain origins
+    try {
+      const url = new URL(origin);
+      if (url.hostname.endsWith('railway.app') || url.hostname === 'localhost' || url.hostname === '127.0.0.1') {
+        return callback(null, true);
+      }
+    } catch (_) {}
+
+    return callback(null, false);
   },
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
@@ -45,12 +65,8 @@ app.get('/health', (req, res) => {
 // Mount API Routes
 app.use('/api', apiRoutes);
 
-// Serve built React PWA frontend in production
-const path = require('path');
-const fs = require('fs');
-const frontendDist = path.join(__dirname, '../../frontend/dist');
+// SPA fallback for HTML5 history API navigation
 if (fs.existsSync(frontendDist)) {
-  app.use(express.static(frontendDist));
   app.get('*', (req, res, next) => {
     if (req.originalUrl.startsWith('/api') || req.originalUrl.startsWith('/health')) {
       return next();
